@@ -27,4 +27,7 @@ name: Node.js CI
                 with:
                   node-version: ${{ matrix.node-version }}
               - run: npm i
+              - run: cd backend
+              - run: npm run dev
+              - run: cd ..
               - run: npm test
